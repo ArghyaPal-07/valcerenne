@@ -63,8 +63,8 @@ function updateHeaderUI(state) {
       `;
     } else {
       container.innerHTML = `
-        <a href="/login.html" class="btn btn-sm btn-outline-primary">
-          <i class="fa-regular fa-user"></i> Account
+        <a href="/login.html" class="action-btn" aria-label="Account">
+          <i class="fa-regular fa-user"></i>Account
         </a>
       `;
     }

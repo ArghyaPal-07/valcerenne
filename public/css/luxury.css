@@ -225,6 +225,11 @@ img {
 .user-auth-slot .btn i {
   font-size: 15px;
 }
+.user-auth-slot .action-btn,
+.user-auth-slot .action-btn:hover {
+  background: transparent;
+  color: #000;
+}
 .maison-nav {
   display: flex;
   justify-content: center;
