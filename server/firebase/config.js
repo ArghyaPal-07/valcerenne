@@ -26,13 +26,45 @@ function firebase() {
     );
   let credential;
   if (process.env.FIREBASE_SERVICE_ACCOUNT_JSON) {
-    const account = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_JSON);
-    if (account.project_id !== projectId)
-      throw new Error(
-        "Firebase service-account project does not match FIREBASE_PROJECT_ID.",
+    let account;
+    try {
+      account = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_JSON);
+    } catch {
+      throw Object.assign(
+        new Error("FIREBASE_SERVICE_ACCOUNT_JSON must contain the complete service-account JSON. See docs/FIREBASE.md."),
+        { status: 503 },
       );
-    credential = cert(account);
-  } else if (!emulator) credential = applicationDefault();
+    }
+    if (!account || typeof account !== "object")
+      throw Object.assign(new Error("Invalid Firebase service-account configuration. See docs/FIREBASE.md."), { status: 503 });
+    if (account.project_id !== projectId)
+      throw Object.assign(
+        new Error("Firebase service-account project does not match FIREBASE_PROJECT_ID."),
+        { status: 503 },
+      );
+    try {
+      credential = cert(account);
+    } catch {
+      throw Object.assign(
+        new Error("Firebase service-account credentials are invalid. Check FIREBASE_SERVICE_ACCOUNT_JSON in the hosting settings."),
+        { status: 503 },
+      );
+    }
+  } else if (!emulator) {
+    if (process.env.VERCEL && /^[a-z]:[\\/]/i.test(process.env.GOOGLE_APPLICATION_CREDENTIALS || ""))
+      throw Object.assign(
+        new Error("Vercel cannot read credentials from your computer. Set FIREBASE_SERVICE_ACCOUNT_JSON in Vercel Environment Variables, remove GOOGLE_APPLICATION_CREDENTIALS there, and redeploy."),
+        { status: 503 },
+      );
+    try {
+      credential = applicationDefault();
+    } catch {
+      throw Object.assign(
+        new Error("Firebase server credentials could not be loaded. On Vercel, configure FIREBASE_SERVICE_ACCOUNT_JSON and redeploy. See docs/FIREBASE.md."),
+        { status: 503 },
+      );
+    }
+  }
   const app =
     getApps().find((a) => a.name === "valcerenne") ||
     initializeApp(

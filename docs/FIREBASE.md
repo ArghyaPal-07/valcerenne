@@ -85,6 +85,20 @@ Migration is resumable create-only, not one cross-service atomic operation: Auth
 
 ## 5. Deploy
 
+### Vercel: fix a missing Windows credential-file error
+
+Vercel runs on a remote Linux server and cannot access a `C:/Users/...` credential file on your computer. The server already supports credentials supplied through `FIREBASE_SERVICE_ACCOUNT_JSON` and gives that variable priority over file-based credentials.
+
+1. Open your Vercel project → Settings → Environment Variables.
+2. Remove `GOOGLE_APPLICATION_CREDENTIALS` from the Vercel environment. Keep the local `.env` setting for development.
+3. Add `FIREBASE_SERVICE_ACCOUNT_JSON`. Paste the **entire contents** of your existing Firebase Admin SDK JSON file as the value, from the opening `{` to the closing `}`. Paste JSON directly without wrapping it in quotes or JavaScript. Keep it private; never use a public/browser prefix or paste the key into chat, source code, or an online converter.
+4. Select Production, and Preview if you use preview deployments. Verify `DB_CLIENT=firebase`, `FIREBASE_PROJECT_ID=valcerinne-ecommerce`, and the Firebase web configuration variables from section 3 are also set for those environments. Use `NODE_ENV=production`.
+5. Redeploy from Deployments → latest deployment → Redeploy. Environment changes apply to a new deployment.
+6. Add your deployed website hostname under Firebase Authentication → Settings → Authorized domains.
+7. Open `/api/products` on the deployed domain and check that it returns a successful JSON response containing products. `/api/health` alone does not verify Firebase credentials or database access.
+
+Reference: [Vercel environment variables](https://vercel.com/docs/environment-variables/managing-environment-variables), [Firebase Admin setup](https://firebase.google.com/docs/admin/setup).
+
 Set the same Firebase variables in the hosting dashboard, with `NODE_ENV=production` and private FIREBASE_SERVICE_ACCOUNT_JSON. Build using `npm ci && npm run build`; start with `npm start`. Add the deployed hostname to Firebase Authentication authorized domains. Keep authentication and Firestore in the same project. The updated Render blueprint contains these environment variable names. Existing Vercel static/API rewrites remain.
 
 ## Data model and preserved behaviour
