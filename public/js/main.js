@@ -64,7 +64,7 @@ function updateHeaderUI(state) {
     } else {
       container.innerHTML = `
         <a href="/login.html" class="action-btn" aria-label="Account">
-          <i class="fa-regular fa-user"></i>Account
+          <i class="fa-regular fa-user"></i>
         </a>
       `;
     }
