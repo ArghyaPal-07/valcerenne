@@ -1,7 +1,7 @@
 {
   "name": "valcerenne-ecommerce",
   "version": "1.0.0",
-  "description": "Valcerenne \u2014 a considered multi-category shopping experience",
+  "description": "Valcerenne — a considered multi-category shopping experience",
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
@@ -33,6 +33,7 @@
   "author": "Antigravity",
   "license": "MIT",
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
