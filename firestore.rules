@@ -1,0 +1,10 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Browser uses Firebase Auth + the Express API. Admin SDK is server-only.
+    // No client may directly change prices, stock, user roles, or orders.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

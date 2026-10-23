@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: valcerenne-ecommerce
+    env: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DB_CLIENT
+        value: firebase
+      - key: FIREBASE_PROJECT_ID
+        sync: false
+      - key: FIREBASE_API_KEY
+        sync: false
+      - key: FIREBASE_AUTH_DOMAIN
+        sync: false
+      - key: FIREBASE_APP_ID
+        sync: false
+      - key: FIREBASE_SERVICE_ACCOUNT_JSON
+        sync: false

@@ -1,0 +1,178 @@
+/* Account, Orders & Addresses Styles */
+
+.account-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2.5rem;
+  margin: 2rem 0 4rem;
+}
+
+/* Account Sidebar */
+.account-sidebar {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  height: fit-content;
+}
+
+.account-user-badge {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.user-avatar-large {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-full);
+  background: var(--primary-light);
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+}
+
+.account-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.account-nav-item a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.account-nav-item a:hover {
+  background: var(--bg-alt);
+  color: var(--primary);
+}
+
+.account-nav-item.active a {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+/* Order History Cards */
+.order-history-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: var(--transition);
+}
+
+.order-history-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.order-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-light);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.order-items-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.order-preview-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.875rem;
+}
+
+/* Tracking Timeline */
+.tracking-timeline {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 2rem 0;
+}
+
+.timeline-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-dot {
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radius-full);
+  background: #cbd5e1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-step.completed .timeline-dot {
+  background: var(--success);
+}
+
+.timeline-step.active .timeline-dot {
+  background: var(--primary);
+}
+
+.timeline-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* Address Cards Grid */
+.address-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.address-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.address-card.default {
+  border-color: var(--primary);
+  background: #fafcff;
+}
+
+@media (max-width: 900px) {
+  .account-layout {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,92 @@
+(node:11540) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+[Error Handler] Error: Please choose a product variant.
+    at fail (C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\helpers.js:4:23)
+    at lineFor (C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\helpers.js:121:21)
+    at C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\commerce.js:49:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Transaction.runTransactionOnce (C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\node_modules\@google-cloud\firestore\build\src\transaction.js:440:28)
+    at async C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\node_modules\@google-cloud\firestore\build\src\transaction.js:412:28
+    at async changeCart (C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\commerce.js:33:20) {
+  status: 400
+}
+[Error Handler] Error: Invalid product variant.
+    at fail (C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\helpers.js:4:23)
+    at lineFor (C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\helpers.js:123:19)
+    at C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\commerce.js:49:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Transaction.runTransactionOnce (C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\node_modules\@google-cloud\firestore\build\src\transaction.js:440:28)
+    at async C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\node_modules\@google-cloud\firestore\build\src\transaction.js:412:28
+    at async changeCart (C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\commerce.js:33:20) {
+  status: 400
+}
+[Error Handler] Error: A positive integer is required.
+    at fail (C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\helpers.js:4:23)
+    at positive (C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\helpers.js:27:5)
+    at C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\commerce.js:39:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Transaction.runTransactionOnce (C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\node_modules\@google-cloud\firestore\build\src\transaction.js:440:28)
+    at async C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\node_modules\@google-cloud\firestore\build\src\transaction.js:412:28
+    at async changeCart (C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\commerce.js:33:20) {
+  status: 400
+}
+[Error Handler] Error: Cart item not found.
+    at fail (C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\helpers.js:4:23)
+    at C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\commerce.js:55:20
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Transaction.runTransactionOnce (C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\node_modules\@google-cloud\firestore\build\src\transaction.js:440:28)
+    at async C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\node_modules\@google-cloud\firestore\build\src\transaction.js:412:28
+    at async changeCart (C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\commerce.js:33:20) {
+  status: 404
+}
+[Error Handler] Error: The selected quantity is no longer available.
+    at fail (C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\helpers.js:4:23)
+    at lineFor (C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\helpers.js:129:5)
+    at C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\commerce.js:66:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Transaction.runTransactionOnce (C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\node_modules\@google-cloud\firestore\build\src\transaction.js:440:28)
+    at async C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\node_modules\@google-cloud\firestore\build\src\transaction.js:412:28
+    at async changeCart (C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\commerce.js:33:20) {
+  status: 400
+}
+[Error Handler] Error: Online payments are not configured. Choose cash on delivery.
+    at fail (C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\helpers.js:4:23)
+    at C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\commerce.js:145:9
+    at C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\helpers.js:18:19
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  status: 503
+}
+[Error Handler] Error: Invalid coupon.
+    at fail (C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\helpers.js:4:23)
+    at C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\commerce.js:172:30
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Transaction.runTransactionOnce (C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\node_modules\@google-cloud\firestore\build\src\transaction.js:440:28)
+    at async C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\node_modules\@google-cloud\firestore\build\src\transaction.js:412:28
+    at async C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\commerce.js:160:22 {
+  status: 400
+}
+[Error Handler] Error: Your cart is empty.
+    at fail (C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\helpers.js:4:23)
+    at C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\commerce.js:162:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Transaction.runTransactionOnce (C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\node_modules\@google-cloud\firestore\build\src\transaction.js:440:28)
+    at async C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\node_modules\@google-cloud\firestore\build\src\transaction.js:412:28
+    at async C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\commerce.js:160:22 {
+  status: 400
+}
+[Error Handler] Error: Unauthorized to view this order.
+    at fail (C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\helpers.js:4:23)
+    at authorizeOrder (C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\commerce.js:395:7)
+    at C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\commerce.js:298:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  status: 403
+}
+[Error Handler] Error: This order cannot be cancelled.
+    at fail (C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\helpers.js:4:23)
+    at C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\commerce.js:314:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Transaction.runTransactionOnce (C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\node_modules\@google-cloud\firestore\build\src\transaction.js:440:28)
+    at async C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\node_modules\@google-cloud\firestore\build\src\transaction.js:412:28
+    at async C:\Users\arghy\Desktop\Coding\Projects\Ecommerce\server\firebase\commerce.js:309:7 {
+  status: 400
+}

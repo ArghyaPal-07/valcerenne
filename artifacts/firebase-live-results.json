@@ -1,0 +1,15 @@
+{
+  "project": "valcerinne-ecommerce",
+  "database": "Cloud Firestore",
+  "authentication": "Firebase Authentication",
+  "emailPasswordEnabled": true,
+  "catalogueProducts": 40,
+  "categories": 7,
+  "migratedDocuments": 65,
+  "unauthenticatedAccountStatus": 401,
+  "directFirestoreStatus": 403,
+  "homepageProductCards": 4,
+  "homepageErrors": [],
+  "emulatorIntegrationChecks": 49,
+  "customerAccountsImported": false
+}

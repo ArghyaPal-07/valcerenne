@@ -1,0 +1,84 @@
+i  emulators: Starting emulators: auth, firestore
+i  emulators: Detected demo project ID "demo-valcerenne", emulated services will use a demo configuration and attempts to access non-emulated services for this project will fail.
+i  firestore: Firestore Emulator logging to firestore-debug.log
++  firestore: Firestore Emulator UI websocket is running on 9150.
+i  Running script: node server/test-firebase.js
+{
+  "project": "demo-valcerenne",
+  "mode": "CREATE MISSING DOCUMENTS",
+  "products": 40,
+  "categories": 7,
+  "reviews": 7,
+  "customerAccounts": 0,
+  "orders": 0
+}
+Migration complete: 65 documents created; 0 existing documents left unchanged. Original SQL data preserved.
+[PASS] Public config contains Firebase web settings only
+[PASS] Original 40 products are served from Firestore
+[PASS] Private product cost is not public
+[PASS] Firestore catalogue search, price filter and sorting
+[PASS] All seven categories preserved
+[PASS] Account API requires authentication
+[PASS] Invalid Firebase ID tokens are rejected
+[PASS] Firebase identity creates profile without accepting client admin role
+[PASS] Firebase profile persists
+[PASS] Firestore rules deny direct browser database access
+[PASS] Cart requires an available variant
+[PASS] Cross-product variants are rejected
+[PASS] Invalid quantities are rejected
+[PASS] Guest cart is stored in Firestore
+[PASS] A different session cannot edit the bag
+[PASS] Firestore cart enforces stock limits
+[PASS] Guest cart merges into Firebase account
+[PASS] Merged guest bag is removed
+[PASS] Wishlist save
+[PASS] Wishlist loads from Firebase
+[PASS] Wishlist removal
+[PASS] Firebase address saved
+[PASS] Address list persists
+[PASS] Unconfigured online payments stay disabled
+[PASS] Checkout revalidates coupon
+[PASS] Firestore transaction prevents duplicate checkout
+[PASS] COD records pending payment without fake tracking
+[PASS] Transaction decrements stock exactly once
+[PASS] Owning Firebase account can read its order
+[PASS] A guest cannot read another customer order
+[PASS] Pending unpaid order can be cancelled
+[PASS] Cancellation restores inventory
+[PASS] Repeated cancellation does not duplicate inventory
+[PASS] Customer has no admin order access
+[PASS] Newsletter preference saved in Firestore
+[PASS] Contact enquiry saved in Firestore
+[PASS] Browser registers through Firebase Authentication
+[PASS] Firebase session survives page reload
+[PASS] Browser wishlist uses verified Firebase session
+[PASS] Browser cart persists in Firestore
+[PASS] Firebase shopping flow retains mobile layout
+[PASS] Firebase logout and login work
+[PASS] Firebase reauthentication and password change
+i  To reset the password for firebase-browser@example.com, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=Ai4MxY3SI_XamC6XHbJ-zQzNq11SuJ3l5MbLpI8qCgeHvzuGQuKvyO&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE
+[PASS] Firebase password reset request
+{
+  "project": "demo-valcerenne",
+  "mode": "CREATE MISSING DOCUMENTS",
+  "products": 40,
+  "categories": 7,
+  "reviews": 7,
+  "customerAccounts": 3,
+  "orders": 0
+}
+Migration complete: 18 documents created; 65 existing documents left unchanged. Original SQL data preserved.
+[PASS] Legacy customers migrate to Firebase UIDs
+[PASS] Migration does not promote demo administrators
+[PASS] Original bcrypt hash is preserved and matches the source password
+[LIMIT] Firebase Auth emulator uses its own fake password hashing; imported bcrypt login must be verified against the real project.
+[PASS] Rerun migration does not duplicate products
+[PASS] No browser JavaScript errors during Firebase flow
+49 Firebase integration checks passed.
++  Script exited successfully (code 0)
+i  emulators: Shutting down emulators.
+i  firestore: Stopping Firestore Emulator
+!  Firestore Emulator has exited upon receiving signal: SIGKILL
+i  auth: Stopping Authentication Emulator
+i  hub: Stopping emulator hub
+i  logging: Stopping Logging Emulator

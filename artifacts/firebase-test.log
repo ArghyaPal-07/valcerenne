@@ -1,0 +1,12 @@
+
+> valcerenne-ecommerce@1.0.0 test:firebase
+> firebase emulators:exec --only firestore,auth --project demo-valcerenne "node server/test-firebase.js"
+
+i  emulators: Starting emulators: auth, firestore
+i  emulators: Detected demo project ID "demo-valcerenne", emulated services will use a demo configuration and attempts to access non-emulated services for this project will fail.
+i  firestore: Firestore Emulator logging to firestore-debug.log
+!  firestore: Fatal error occurred: 
+   Firestore Emulator has exited with code: 3221225786, 
+   stopping all running emulators
+i  firestore: Stopping Firestore Emulator
+i  hub: Stopping emulator hub

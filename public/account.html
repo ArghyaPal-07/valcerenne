@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Account - Valcerenne</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;450;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/header-footer.css" />
+    <link rel="stylesheet" href="/css/account.css" />
+    <link rel="stylesheet" href="/css/luxury.css" />
+    <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/assets/brand/app-icon.png" />
+    <meta name="theme-color" content="#4b2028" />
+    <meta
+      name="description"
+      content="Valcerenne — a considered collection of fashion, accessories, home and technology. The art of choosing well."
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a
+    ><span id="main-content" tabindex="-1"></span>
+
+    <!-- Header -->
+    <div class="announcement-bar">
+      <div class="container announcement-content">
+        <span>A considered collection. A world of possibilities.</span
+        ><a href="/policies.html#delivery"
+          >Complimentary delivery on orders ₹999+
+          <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="container maison-top">
+        <a href="/contact.html" class="concierge-link">CLIENT SERVICES</a
+        ><a href="/" class="brand-logo" aria-label="Valcerenne home"
+          ><img
+            src="/assets/brand/logo-primary.png"
+            width="240"
+            height="50"
+            alt="VALCERENNE"
+        /></a>
+        <div class="header-actions">
+          <button
+            class="action-btn"
+            id="search-toggle"
+            aria-label="Search collection"
+            aria-expanded="false"
+            aria-controls="site-search"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <div class="user-auth-slot"></div>
+          <a href="/wishlist.html" class="action-btn" aria-label="Wishlist"
+            ><i class="fa-regular fa-heart"></i
+            ><span class="action-badge wishlist-badge" style="display: none"
+              >0</span
+            ></a
+          ><a
+            href="/cart.html"
+            class="action-btn open-cart-drawer"
+            aria-label="Shopping bag"
+            ><i class="fa-solid fa-bag-shopping"></i
+            ><span class="action-badge cart-badge" style="display: none"
+              >0</span
+            ></a
+          ><button
+            class="mobile-menu-btn"
+            id="mobile-menu-toggle"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="mobile-nav-menu"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <nav class="maison-nav" aria-label="Main navigation">
+        <a href="/shop.html?sort=newest">New & Noteworthy</a
+        ><a href="/shop.html?category=womens-fashion">Women</a
+        ><a href="/shop.html?category=mens-fashion">Men</a
+        ><a href="/shop.html?category=accessories">Bags & Accessories</a
+        ><a href="/shop.html?category=footwear">Footwear</a
+        ><a href="/shop.html?category=home-living">Home & Living</a
+        ><a href="/shop.html?category=gadgets">Technology</a
+        ><a href="/shop.html?category=sports-fitness">Wellbeing</a
+        ><a href="/about.html" class="nav-story">The Maison</a>
+      </nav>
+      <div class="header-search container" id="site-search" hidden>
+        <label for="shop-search-input" class="sr-only">Search products</label
+        ><i class="fa-solid fa-magnifying-glass header-search-icon"></i
+        ><input
+          id="shop-search-input"
+          type="search"
+          placeholder="Find something extraordinary…"
+        /><button
+          id="search-close"
+          class="action-btn"
+          aria-label="Close search"
+        >
+          ×
+        </button>
+      </div>
+      <nav id="mobile-nav-menu" aria-label="Mobile navigation">
+        <a href="/shop.html">The complete collection</a
+        ><a href="/shop.html?sort=newest">New arrivals</a
+        ><a href="/shop.html?category=womens-fashion">Women</a
+        ><a href="/shop.html?category=mens-fashion">Men</a
+        ><a href="/shop.html?category=accessories">Bags & accessories</a
+        ><a href="/shop.html?category=footwear">Footwear</a
+        ><a href="/shop.html?category=home-living">Home & living</a
+        ><a href="/shop.html?category=gadgets">Technology</a
+        ><a href="/shop.html?category=sports-fitness">Wellbeing</a
+        ><a href="/about.html">The Maison</a
+        ><a href="/contact.html">Client services</a>
+      </nav>
+    </header>
+
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/"><i class="fa-solid fa-house"></i> Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span>My Account</span>
+      </div>
+
+      <div class="account-layout">
+        <!-- Sidebar Nav -->
+        <aside class="account-sidebar">
+          <div class="account-user-badge">
+            <div class="user-avatar-large user-display-avatar">U</div>
+            <div>
+              <div
+                style="font-weight: 700; font-size: 1.05rem"
+                class="user-display-name"
+              >
+                Customer Name
+              </div>
+              <div
+                style="font-size: 0.8rem; color: var(--text-muted)"
+                class="user-display-email"
+              >
+                email@example.com
+              </div>
+            </div>
+          </div>
+
+          <ul class="account-nav">
+            <li class="account-nav-item active">
+              <a href="/account.html"
+                ><i class="fa-solid fa-gauge-high"></i> Profile & Settings</a
+              >
+            </li>
+            <li class="account-nav-item">
+              <a href="/orders.html"
+                ><i class="fa-solid fa-box-archive"></i> Order History</a
+              >
+            </li>
+            <li class="account-nav-item">
+              <a href="/wishlist.html"
+                ><i class="fa-solid fa-heart"></i> Saved Favourites</a
+              >
+            </li>
+            <li class="account-nav-item">
+              <a href="/addresses.html"
+                ><i class="fa-solid fa-map-location-dot"></i> Address Book</a
+              >
+            </li>
+            <li class="account-nav-item">
+              <a
+                href="#"
+                onclick="
+                  State.logout();
+                  return false;
+                "
+                class="text-danger"
+                ><i class="fa-solid fa-right-from-bracket"></i> Logout</a
+              >
+            </li>
+          </ul>
+        </aside>
+
+        <!-- Main Profile Settings -->
+        <div>
+          <div class="card" style="margin-bottom: 2rem">
+            <div class="card-header">
+              <h3>
+                <i class="fa-solid fa-user-pen text-primary"></i> Personal
+                Profile
+              </h3>
+            </div>
+            <div class="card-body">
+              <form id="profile-edit-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="profile-name"
+                      >Full Name</label
+                    >
+                    <input
+                      type="text"
+                      id="profile-name"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="profile-phone"
+                      >Phone Number</label
+                    >
+                    <input
+                      type="tel"
+                      id="profile-phone"
+                      class="form-control"
+                      placeholder="+1 (555) 000-0000"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="profile-email"
+                    >Email Address (Read-only)</label
+                  >
+                  <input
+                    type="email"
+                    id="profile-email"
+                    class="form-control"
+                    disabled
+                    style="background: var(--bg-alt)"
+                  />
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                  Save Profile Changes
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3>
+                <i class="fa-solid fa-shield-halved text-warning"></i> Security
+                & Password
+              </h3>
+            </div>
+            <div class="card-body">
+              <form id="change-password-form">
+                <div class="form-group">
+                  <label class="form-label" for="current-pwd"
+                    >Current Password</label
+                  >
+                  <input
+                    type="password"
+                    id="current-pwd"
+                    class="form-control"
+                    placeholder="••••••••"
+                    required
+                  />
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="new-pwd">New Password</label>
+                    <input
+                      type="password"
+                      id="new-pwd"
+                      class="form-control"
+                      placeholder="••••••••"
+                      minlength="6"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="confirm-pwd"
+                      >Confirm New Password</label
+                    >
+                    <input
+                      type="password"
+                      id="confirm-pwd"
+                      class="form-control"
+                      placeholder="••••••••"
+                      minlength="6"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-outline-primary">
+                  Update Password
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="/" aria-label="Valcerenne home"
+              ><img
+                src="/assets/brand/logo-dark.svg"
+                width="240"
+                height="50"
+                alt="VALCERENNE"
+            /></a>
+            <p>
+              The art of choosing well.<br />A considered world of style,
+              objects, and everyday rituals.
+            </p>
+          </div>
+          <div>
+            <h3 class="footer-title">EXPLORE</h3>
+            <ul class="footer-links">
+              <li><a href="/shop.html">The collection</a></li>
+              <li><a href="/shop.html?sort=newest">New arrivals</a></li>
+              <li><a href="/about.html">Our philosophy</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-title">CLIENT SERVICES</h3>
+            <ul class="footer-links">
+              <li><a href="/contact.html">Contact & assistance</a></li>
+              <li><a href="/policies.html#delivery">Delivery & returns</a></li>
+              <li><a href="/orders.html">Your orders</a></li>
+              <li><a href="/account.html">Your account</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-title">THE SMALL PRINT</h3>
+            <ul class="footer-links">
+              <li><a href="/policies.html#privacy">Privacy</a></li>
+              <li><a href="/policies.html#terms">Terms of service</a></li>
+              <li><a href="/policies.html#payments">Payment information</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 VALCERENNE</span><span>India · INR ₹</span
+          ><span>Considered in every detail.</span>
+        </div>
+      </div>
+    </footer>
+    <div class="cart-drawer-overlay" id="cart-drawer-overlay">
+      <section
+        class="cart-drawer"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Your shopping bag"
+        tabindex="-1"
+      >
+        <div class="cart-drawer-header">
+          <h2>Your selection</h2>
+          <button
+            id="close-cart-drawer"
+            class="action-btn"
+            aria-label="Close shopping bag"
+          >
+            ×
+          </button>
+        </div>
+        <div class="cart-drawer-items" id="cart-drawer-items-list"></div>
+        <div class="cart-drawer-footer">
+          <div class="cart-drawer-subtotal">
+            <span>Subtotal</span><span id="cart-drawer-subtotal-val">₹0</span>
+          </div>
+          <a href="/cart.html" class="btn btn-outline btn-block"
+            >Review your bag</a
+          ><a href="/checkout.html" class="btn btn-primary btn-block"
+            >Continue to checkout →</a
+          >
+        </div>
+      </section>
+    </div>
+    <script src="/js/vendor/firebase-session.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="/js/state.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/account.js"></script>
+  </body>
+</html>

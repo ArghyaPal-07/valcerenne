@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details - Valcerenne</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;450;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/header-footer.css" />
+    <link rel="stylesheet" href="/css/shop.css" />
+    <link rel="stylesheet" href="/css/product.css" />
+    <link rel="stylesheet" href="/css/luxury.css" />
+    <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/assets/brand/app-icon.png" />
+    <meta name="theme-color" content="#4b2028" />
+    <meta
+      name="description"
+      content="Valcerenne — a considered collection of fashion, accessories, home and technology. The art of choosing well."
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a
+    ><span id="main-content" tabindex="-1"></span>
+
+    <!-- Announcement Bar -->
+
+    <!-- Header -->
+    <div class="announcement-bar">
+      <div class="container announcement-content">
+        <span>A considered collection. A world of possibilities.</span
+        ><a href="/policies.html#delivery"
+          >Complimentary delivery on orders ₹999+
+          <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="container maison-top">
+        <a href="/contact.html" class="concierge-link">CLIENT SERVICES</a
+        ><a href="/" class="brand-logo" aria-label="Valcerenne home"
+          ><img
+            src="/assets/brand/logo-primary.png"
+            width="240"
+            height="50"
+            alt="VALCERENNE"
+        /></a>
+        <div class="header-actions">
+          <button
+            class="action-btn"
+            id="search-toggle"
+            aria-label="Search collection"
+            aria-expanded="false"
+            aria-controls="site-search"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <div class="user-auth-slot"></div>
+          <a href="/wishlist.html" class="action-btn" aria-label="Wishlist"
+            ><i class="fa-regular fa-heart"></i
+            ><span class="action-badge wishlist-badge" style="display: none"
+              >0</span
+            ></a
+          ><a
+            href="/cart.html"
+            class="action-btn open-cart-drawer"
+            aria-label="Shopping bag"
+            ><i class="fa-solid fa-bag-shopping"></i
+            ><span class="action-badge cart-badge" style="display: none"
+              >0</span
+            ></a
+          ><button
+            class="mobile-menu-btn"
+            id="mobile-menu-toggle"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="mobile-nav-menu"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <nav class="maison-nav" aria-label="Main navigation">
+        <a href="/shop.html?sort=newest">New & Noteworthy</a
+        ><a href="/shop.html?category=womens-fashion">Women</a
+        ><a href="/shop.html?category=mens-fashion">Men</a
+        ><a href="/shop.html?category=accessories">Bags & Accessories</a
+        ><a href="/shop.html?category=footwear">Footwear</a
+        ><a href="/shop.html?category=home-living">Home & Living</a
+        ><a href="/shop.html?category=gadgets">Technology</a
+        ><a href="/shop.html?category=sports-fitness">Wellbeing</a
+        ><a href="/about.html" class="nav-story">The Maison</a>
+      </nav>
+      <div class="header-search container" id="site-search" hidden>
+        <label for="shop-search-input" class="sr-only">Search products</label
+        ><i class="fa-solid fa-magnifying-glass header-search-icon"></i
+        ><input
+          id="shop-search-input"
+          type="search"
+          placeholder="Find something extraordinary…"
+        /><button
+          id="search-close"
+          class="action-btn"
+          aria-label="Close search"
+        >
+          ×
+        </button>
+      </div>
+      <nav id="mobile-nav-menu" aria-label="Mobile navigation">
+        <a href="/shop.html">The complete collection</a
+        ><a href="/shop.html?sort=newest">New arrivals</a
+        ><a href="/shop.html?category=womens-fashion">Women</a
+        ><a href="/shop.html?category=mens-fashion">Men</a
+        ><a href="/shop.html?category=accessories">Bags & accessories</a
+        ><a href="/shop.html?category=footwear">Footwear</a
+        ><a href="/shop.html?category=home-living">Home & living</a
+        ><a href="/shop.html?category=gadgets">Technology</a
+        ><a href="/shop.html?category=sports-fitness">Wellbeing</a
+        ><a href="/about.html">The Maison</a
+        ><a href="/contact.html">Client services</a>
+      </nav>
+    </header>
+
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/"><i class="fa-solid fa-house"></i> Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="/shop.html" id="breadcrumb-category">Catalog</a>
+        <span class="breadcrumb-separator">/</span>
+        <span id="breadcrumb-title">Product Details</span>
+      </div>
+
+      <!-- Product Main Details Layout -->
+      <div class="product-detail-layout">
+        <!-- Gallery -->
+        <div class="product-gallery">
+          <div class="gallery-main">
+            <img
+              id="main-product-image"
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80"
+              alt="Product Image"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-thumbnails" id="gallery-thumbnails">
+            <!-- Loaded via product.js -->
+          </div>
+        </div>
+
+        <!-- Product Information -->
+        <div class="product-info-panel">
+          <div class="product-info-header">
+            <div class="product-sku" id="product-sku">SKU: ---</div>
+            <h1 class="product-main-title" id="product-title">
+              Loading Product...
+            </h1>
+            <div class="product-rating-row">
+              <div id="product-rating-box"></div>
+              <div id="product-stock-status"></div>
+            </div>
+          </div>
+
+          <div class="product-pricing-box">
+            <span class="current-price" id="product-price">₹0</span>
+            <span
+              class="old-price"
+              id="product-compare-price"
+              style="display: none"
+              >₹0</span
+            >
+            <span
+              class="discount-badge"
+              id="product-discount"
+              style="display: none"
+            ></span>
+          </div>
+
+          <p class="product-short-desc" id="product-short-desc"></p>
+
+          <!-- Variants (Size / Color) -->
+          <div id="variants-container"></div>
+
+          <!-- Quantity & Add to Cart -->
+          <div class="product-actions-bar">
+            <div class="quantity-picker">
+              <button
+                type="button"
+                class="qty-btn"
+                onclick="changeQuantity(-1)"
+              >
+                -
+              </button>
+              <input
+                type="text"
+                id="product-qty-input"
+                class="qty-input"
+                value="1"
+                readonly
+              />
+              <button type="button" class="qty-btn" onclick="changeQuantity(1)">
+                +
+              </button>
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-lg btn-primary"
+              id="add-to-cart-btn"
+              onclick="handleAddToCart()"
+            >
+              <i class="fa-solid fa-cart-plus"></i> Add to Cart
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-lg btn-secondary"
+              id="buy-now-btn"
+              onclick="handleBuyNow()"
+            >
+              Buy Now
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-lg btn-outline"
+              id="product-wishlist-btn"
+              onclick="toggleProductWishlist()"
+            >
+              <i class="fa-regular fa-heart"></i> ♡ Add to favourites
+            </button>
+          </div>
+
+          <!-- Perks List -->
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 1rem;
+              margin-top: 2rem;
+              padding-top: 1.5rem;
+              border-top: 1px solid var(--border-color);
+              font-size: 0.85rem;
+              color: var(--text-muted);
+            "
+          >
+            <div>
+              <i class="fa-solid fa-truck text-primary"></i> Free delivery on
+              ₹999+
+            </div>
+            <div>
+              <i class="fa-solid fa-rotate-left text-success"></i> Delivery &
+              return assistance
+            </div>
+            <div>
+              <i class="fa-solid fa-shield-halved text-info"></i> Contact us for
+              product assistance
+            </div>
+            <div>
+              <i class="fa-solid fa-certificate text-warning"></i> Details in
+              the product description
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Tabs (Description, Specifications, Customer Reviews) -->
+      <div class="product-tabs-section">
+        <div class="tabs-nav">
+          <button class="tab-btn active" data-tab="tab-description">
+            Description
+          </button>
+          <button class="tab-btn" data-tab="tab-specs">Specifications</button>
+          <button class="tab-btn" data-tab="tab-reviews">
+            Customer Reviews
+          </button>
+        </div>
+
+        <!-- Description Pane -->
+        <div class="tab-content-pane active" id="tab-description">
+          <!-- Loaded via product.js -->
+        </div>
+
+        <!-- Specifications Pane -->
+        <div class="tab-content-pane" id="tab-specs">
+          <p style="line-height: 1.9; color: var(--text-muted)">
+            Materials and construction details are included in the product
+            description where available. For care or sizing advice,
+            <a href="/contact.html">contact client services</a>.
+          </p>
+        </div>
+
+        <!-- Reviews Pane -->
+        <div class="tab-content-pane" id="tab-reviews">
+          <div class="reviews-summary-card">
+            <div style="text-align: center">
+              <div
+                style="font-size: 3rem; font-weight: 800; color: var(--primary)"
+                id="reviews-avg-rating"
+              >
+                0.0
+              </div>
+              <div style="color: #fbbf24; margin-bottom: 0.25rem">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i>
+              </div>
+              <div
+                style="font-size: 0.8125rem; color: var(--text-muted)"
+                id="reviews-total-count"
+              >
+                0 Ratings
+              </div>
+            </div>
+            <div>
+              <h4
+                style="
+                  font-size: 1.1rem;
+                  font-weight: 700;
+                  margin-bottom: 0.5rem;
+                "
+              >
+                Have you purchased this piece?
+              </h4>
+              <p
+                style="
+                  font-size: 0.875rem;
+                  color: var(--text-muted);
+                  margin-bottom: 1rem;
+                "
+              >
+                Share your honest fit, sizing, and comfort feedback with other
+                customers.
+              </p>
+              <button class="btn btn-primary" id="open-write-review-btn">
+                <i class="fa-solid fa-pen"></i> Write a Review
+              </button>
+            </div>
+          </div>
+
+          <div id="reviews-list-container">
+            <!-- Loaded via product.js -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Related Products -->
+      <div style="margin: 4rem 0">
+        <h2 class="section-title" style="margin-bottom: 1.5rem">
+          You May Also Like
+        </h2>
+        <div class="product-grid" id="related-products-grid">
+          <!-- Loaded via product.js -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Review Modal -->
+    <div class="modal-overlay" id="review-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Write a Product Review</h3>
+          <button class="modal-close" id="close-review-modal">&times;</button>
+        </div>
+        <form id="write-review-form">
+          <div class="modal-body">
+            <div class="form-group">
+              <label class="form-label" for="review-title"
+                >Your Rating (1 to 5 Stars)</label
+              >
+              <div style="display: flex; gap: 1rem; font-size: 1.25rem">
+                <label style="cursor: pointer"
+                  ><input type="radio" name="rating" value="5" checked /> 5
+                  ★</label
+                >
+                <label style="cursor: pointer"
+                  ><input type="radio" name="rating" value="4" /> 4 ★</label
+                >
+                <label style="cursor: pointer"
+                  ><input type="radio" name="rating" value="3" /> 3 ★</label
+                >
+                <label style="cursor: pointer"
+                  ><input type="radio" name="rating" value="2" /> 2 ★</label
+                >
+                <label style="cursor: pointer"
+                  ><input type="radio" name="rating" value="1" /> 1 ★</label
+                >
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Review Headline</label>
+              <input
+                type="text"
+                id="review-title"
+                class="form-control"
+                placeholder="Your experience with this piece"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="review-comment"
+                >Detailed Review</label
+              >
+              <textarea
+                id="review-comment"
+                class="form-control"
+                rows="4"
+                placeholder="Describe fit, comfort, sizing, and build quality..."
+                required
+              ></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Submit Review</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Cart Drawer Overlay -->
+    <div class="cart-drawer-overlay" id="cart-drawer-overlay">
+      <div class="cart-drawer">
+        <div class="cart-drawer-header">
+          <h3 style="font-weight: 700; font-size: 1.125rem">
+            <i class="fa-solid fa-bag-shopping text-primary"></i> Your Cart
+          </h3>
+          <button
+            id="close-cart-drawer"
+            style="
+              background: none;
+              border: none;
+              font-size: 1.25rem;
+              color: var(--text-muted);
+              cursor: pointer;
+            "
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="cart-drawer-items" id="cart-drawer-items-list"></div>
+        <div class="cart-drawer-footer">
+          <div class="cart-drawer-subtotal">
+            <span>Subtotal:</span>
+            <span
+              id="cart-drawer-subtotal-val"
+              style="color: var(--primary); font-weight: 800"
+              >₹0</span
+            >
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem">
+            <a href="/cart.html" class="btn btn-outline btn-block"
+              >View Full Cart</a
+            >
+            <a href="/checkout.html" class="btn btn-primary btn-block"
+              ><i class="fa-solid fa-lock"></i> Checkout Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="/" aria-label="Valcerenne home"
+              ><img
+                src="/assets/brand/logo-dark.svg"
+                width="240"
+                height="50"
+                alt="VALCERENNE"
+            /></a>
+            <p>
+              The art of choosing well.<br />A considered world of style,
+              objects, and everyday rituals.
+            </p>
+          </div>
+          <div>
+            <h3 class="footer-title">EXPLORE</h3>
+            <ul class="footer-links">
+              <li><a href="/shop.html">The collection</a></li>
+              <li><a href="/shop.html?sort=newest">New arrivals</a></li>
+              <li><a href="/about.html">Our philosophy</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-title">CLIENT SERVICES</h3>
+            <ul class="footer-links">
+              <li><a href="/contact.html">Contact & assistance</a></li>
+              <li><a href="/policies.html#delivery">Delivery & returns</a></li>
+              <li><a href="/orders.html">Your orders</a></li>
+              <li><a href="/account.html">Your account</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-title">THE SMALL PRINT</h3>
+            <ul class="footer-links">
+              <li><a href="/policies.html#privacy">Privacy</a></li>
+              <li><a href="/policies.html#terms">Terms of service</a></li>
+              <li><a href="/policies.html#payments">Payment information</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 VALCERENNE</span><span>India · INR ₹</span
+          ><span>Considered in every detail.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/vendor/firebase-session.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="/js/state.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/product.js"></script>
+  </body>
+</html>

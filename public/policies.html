@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client information — Valcerenne</title>
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;450;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/header-footer.css" />
+    <link rel="stylesheet" href="/css/shop.css" />
+    <link rel="stylesheet" href="/css/luxury.css" />
+    <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/assets/brand/app-icon.png" />
+    <meta name="theme-color" content="#4b2028" />
+    <meta
+      name="description"
+      content="Valcerenne — a considered collection of fashion, accessories, home and technology. The art of choosing well."
+    />
+  </head>
+  <body>
+    <div class="announcement-bar">
+      <div class="container announcement-content">
+        <span>A considered collection. A world of possibilities.</span
+        ><a href="/policies.html#delivery"
+          >Complimentary delivery on orders ₹999+
+          <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="container maison-top">
+        <a href="/contact.html" class="concierge-link">CLIENT SERVICES</a
+        ><a href="/" class="brand-logo" aria-label="Valcerenne home"
+          ><img
+            src="/assets/brand/logo-primary.png"
+            width="240"
+            height="50"
+            alt="VALCERENNE"
+        /></a>
+        <div class="header-actions">
+          <button
+            class="action-btn"
+            id="search-toggle"
+            aria-label="Search collection"
+            aria-expanded="false"
+            aria-controls="site-search"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <div class="user-auth-slot"></div>
+          <a href="/wishlist.html" class="action-btn" aria-label="Wishlist"
+            ><i class="fa-regular fa-heart"></i
+            ><span class="action-badge wishlist-badge" style="display: none"
+              >0</span
+            ></a
+          ><a
+            href="/cart.html"
+            class="action-btn open-cart-drawer"
+            aria-label="Shopping bag"
+            ><i class="fa-solid fa-bag-shopping"></i
+            ><span class="action-badge cart-badge" style="display: none"
+              >0</span
+            ></a
+          ><button
+            class="mobile-menu-btn"
+            id="mobile-menu-toggle"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="mobile-nav-menu"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <nav class="maison-nav" aria-label="Main navigation">
+        <a href="/shop.html?sort=newest">New & Noteworthy</a
+        ><a href="/shop.html?category=womens-fashion">Women</a
+        ><a href="/shop.html?category=mens-fashion">Men</a
+        ><a href="/shop.html?category=accessories">Bags & Accessories</a
+        ><a href="/shop.html?category=footwear">Footwear</a
+        ><a href="/shop.html?category=home-living">Home & Living</a
+        ><a href="/shop.html?category=gadgets">Technology</a
+        ><a href="/shop.html?category=sports-fitness">Wellbeing</a
+        ><a href="/about.html" class="nav-story">The Maison</a>
+      </nav>
+      <div class="header-search container" id="site-search" hidden>
+        <label for="shop-search-input" class="sr-only">Search products</label
+        ><i class="fa-solid fa-magnifying-glass header-search-icon"></i
+        ><input
+          id="shop-search-input"
+          type="search"
+          placeholder="Find something extraordinary…"
+        /><button
+          id="search-close"
+          class="action-btn"
+          aria-label="Close search"
+        >
+          ×
+        </button>
+      </div>
+      <nav id="mobile-nav-menu" aria-label="Mobile navigation">
+        <a href="/shop.html">The complete collection</a
+        ><a href="/shop.html?sort=newest">New arrivals</a
+        ><a href="/shop.html?category=womens-fashion">Women</a
+        ><a href="/shop.html?category=mens-fashion">Men</a
+        ><a href="/shop.html?category=accessories">Bags & accessories</a
+        ><a href="/shop.html?category=footwear">Footwear</a
+        ><a href="/shop.html?category=home-living">Home & living</a
+        ><a href="/shop.html?category=gadgets">Technology</a
+        ><a href="/shop.html?category=sports-fitness">Wellbeing</a
+        ><a href="/about.html">The Maison</a
+        ><a href="/contact.html">Client services</a>
+      </nav>
+    </header>
+    <main class="container policy-content">
+      <p class="eyebrow">CLIENT SERVICES</p>
+      <h1>The details, <em>considered.</em></h1>
+      <section id="delivery">
+        <h2>Delivery & returns</h2>
+        <p>
+          Prices are in Indian rupees. Standard shipping is ₹149, complimentary
+          for orders of ₹999 or more. Shipping and estimated tax are shown
+          before you submit your order. Contact client services to confirm
+          delivery availability, timing, or a return before purchasing. No
+          automatic return window or international shipping service is currently
+          configured.
+        </p>
+      </section>
+      <section id="payments">
+        <h2>Payment information</h2>
+        <p>
+          Online card and wallet payments are not connected. Never enter card
+          details on this site. Checkout supports cash on delivery, recorded as
+          payment pending; availability must be confirmed with client services.
+          An order confirmation records your order, not a completed payment.
+        </p>
+      </section>
+      <section id="privacy">
+        <h2>Privacy</h2>
+        <p>
+          Firebase Authentication manages sign-in. Profiles, addresses, wishlists, orders and newsletter preferences are stored in Cloud Firestore. Firebase persists your sign-in in this browser; local storage keeps your shopping session; session storage keeps your checkout summary. These
+          are used for the shopping experience. Contact client services about
+          access, correction, newsletter removal, or deletion requests. No
+          analytics service has been added.
+        </p>
+      </section>
+      <section id="terms">
+        <h2>Shopping terms</h2>
+        <p>
+          The existing catalogue supplies product descriptions, prices,
+          variants, and availability. Campaign photographs are editorial imagery
+          and do not represent additional inventory. Review your selection and
+          shipping details before submitting an order. Product availability is
+          checked by the server. Delivery and returns require operational
+          confirmation from the store.
+        </p>
+      </section>
+      <a class="text-link" href="/contact.html">Contact client services ↗</a>
+    </main>
+    <div class="cart-drawer-overlay" id="cart-drawer-overlay">
+      <section
+        class="cart-drawer"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Your shopping bag"
+        tabindex="-1"
+      >
+        <div class="cart-drawer-header">
+          <h2>Your selection</h2>
+          <button
+            id="close-cart-drawer"
+            class="action-btn"
+            aria-label="Close shopping bag"
+          >
+            ×
+          </button>
+        </div>
+        <div class="cart-drawer-items" id="cart-drawer-items-list"></div>
+        <div class="cart-drawer-footer">
+          <div class="cart-drawer-subtotal">
+            <span>Subtotal</span><span id="cart-drawer-subtotal-val">₹0</span>
+          </div>
+          <a href="/cart.html" class="btn btn-outline btn-block"
+            >Review your bag</a
+          ><a href="/checkout.html" class="btn btn-primary btn-block"
+            >Continue to checkout →</a
+          >
+        </div>
+      </section>
+    </div>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="/" aria-label="Valcerenne home"
+              ><img
+                src="/assets/brand/logo-dark.svg"
+                width="240"
+                height="50"
+                alt="VALCERENNE"
+            /></a>
+            <p>
+              The art of choosing well.<br />A considered world of style,
+              objects, and everyday rituals.
+            </p>
+          </div>
+          <div>
+            <h3 class="footer-title">EXPLORE</h3>
+            <ul class="footer-links">
+              <li><a href="/shop.html">The collection</a></li>
+              <li><a href="/shop.html?sort=newest">New arrivals</a></li>
+              <li><a href="/about.html">Our philosophy</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-title">CLIENT SERVICES</h3>
+            <ul class="footer-links">
+              <li><a href="/contact.html">Contact & assistance</a></li>
+              <li><a href="/policies.html#delivery">Delivery & returns</a></li>
+              <li><a href="/orders.html">Your orders</a></li>
+              <li><a href="/account.html">Your account</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-title">THE SMALL PRINT</h3>
+            <ul class="footer-links">
+              <li><a href="/policies.html#privacy">Privacy</a></li>
+              <li><a href="/policies.html#terms">Terms of service</a></li>
+              <li><a href="/policies.html#payments">Payment information</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 VALCERENNE</span><span>India · INR ₹</span
+          ><span>Considered in every detail.</span>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/vendor/firebase-session.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="/js/state.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

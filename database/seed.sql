@@ -1,0 +1,189 @@
+-- KickUp E-Commerce Seed Data (40 Realistic Products, 7 Categories, Images, Variants, Coupons, Demo Accounts)
+
+-- Users (Demo Customer & Demo Admin)
+INSERT INTO users (id, full_name, email, password_hash, role, phone, avatar_url) VALUES
+(1, 'Alex Morgan', 'customer@example.com', '$2a$10$GNy.WVGG0N8VOMENVdqi4ONkyQbagSnjtE3CzIgqVlG/n23qMDcB2', 'customer', '+91 98765 43210', 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80'),
+(2, 'Sarah Connor', 'admin@example.com', '$2a$10$lhUKNshB79.ORadU3UhA0OE4Al2xCNBB6vAGckrGf.KSAWIIljFcm', 'admin', '+91 98765 12345', 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80'),
+(3, 'David Miller', 'david.m@example.com', '$2a$10$GNy.WVGG0N8VOMENVdqi4ONkyQbagSnjtE3CzIgqVlG/n23qMDcB2', 'customer', '+91 98765 67890', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80');
+
+-- Categories
+INSERT INTO categories (id, name, slug, description, image_url, parent_id, sort_order) VALUES
+(1, 'Gadgets & Tech', 'gadgets', 'Cutting-edge consumer tech, audio gear, and smart accessories', 'https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=600&q=80', NULL, 1),
+(2, 'Men''s Fashion', 'mens-fashion', 'Contemporary menswear, tailored fits, and timeless everyday essentials', 'https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?auto=format&fit=crop&w=600&q=80', NULL, 2),
+(3, 'Women''s Fashion', 'womens-fashion', 'Chic dresses, seasonal outerwear, and elevated basics', 'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=600&q=80', NULL, 3),
+(4, 'Sneakers & Footwear', 'footwear', 'Athletic performance shoes, leather boots, and designer sneakers', 'https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80', NULL, 4),
+(5, 'Home & Living', 'home-living', 'Modern minimalist interior decor, lighting, and kitchenware', 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80', NULL, 5),
+(6, 'Accessories & Watches', 'accessories', 'Luxury timepieces, polarized sunglasses, and genuine leather bags', 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80', NULL, 6),
+(7, 'Sports & Fitness', 'sports-fitness', 'Workout apparel, gym equipment, and hydration gear', 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80', NULL, 7);
+
+-- 40 Products (Prices in INR)
+INSERT INTO products (id, category_id, title, slug, sku, description, short_description, price, compare_price, cost_price, is_featured, is_new, rating_avg, review_count, stock_qty) VALUES
+-- Electronics (1-6)
+(1, 1, 'Aura Wireless Active Noise-Cancelling Headphones', 'aura-anc-headphones', 'EL-AURA-01', 'Experience studio-grade acoustic performance with 40mm custom graphene drivers. Features hybrid active noise cancellation, 45-hour battery life, plush memory foam ear cushions, and ultra-low latency Bluetooth 5.3 connectivity.', 'Studio-grade hybrid ANC headphones with 45-hour battery life.', 14999.00, 18999.00, 7500.00, 1, 1, 4.85, 42, 65),
+(2, 1, 'Pulse Pro Smartwatch Series 7', 'pulse-pro-smartwatch', 'EL-PULSE-02', 'All-day health tracking with continuous heart rate monitoring, ECG sensor, blood oxygen saturation tracking, and built-in GPS. Aerospace-grade aluminum casing with an always-on Retina AMOLED display.', 'Sleek aerospace aluminum smartwatch with ECG and GPS tracking.', 12499.00, 15999.00, 6000.00, 1, 1, 4.78, 38, 50),
+(3, 1, 'SonicBoom 360 Portable Waterproof Speaker', 'sonicboom-waterproof-speaker', 'EL-SONIC-03', 'Engineered for outdoors with IPX7 waterproof rating, dual passive bass radiators, and immersive 360-degree room-filling sound. Up to 24 hours playtime on a single charge.', 'Rugged IPX7 waterproof Bluetooth speaker with 360-degree sound.', 4999.00, 6999.00, 2200.00, 0, 0, 4.60, 29, 90),
+(4, 1, 'Clarity 4K UHD Smart Webcam with Ring Light', 'clarity-4k-webcam', 'EL-CLAR-04', 'Broadcast-quality 4K resolution at 60fps, integrated adjustable bi-color ring light, dual noise-canceling stereo microphones, and AI auto-framing.', 'Professional 4K streaming webcam with integrated LED ring light.', 7999.00, 9999.00, 3500.00, 0, 1, 4.70, 19, 45),
+(5, 1, 'MagCharge 3-in-1 Foldable Wireless Station', 'magcharge-3in1-station', 'EL-MAG-05', 'Fast charge your phone, smartwatch, and earbuds simultaneously. Compact foldable magnetic design crafted from premium anodized aluminum.', 'Foldable 3-in-1 magnetic fast wireless charging dock.', 2999.00, 4499.00, 1200.00, 1, 0, 4.65, 34, 120),
+(6, 1, 'Titan 20,000mAh 65W PD Power Bank', 'titan-65w-power-bank', 'EL-TITAN-06', 'High-capacity airline-safe portable charger with 65W Power Delivery output capable of charging laptops, tablets, and smartphones at top speeds.', 'Ultra-fast 65W laptop & smartphone power bank with digital LED display.', 3499.00, 4999.00, 1500.00, 0, 0, 4.90, 56, 80),
+
+-- Men's Fashion (7-12)
+(7, 2, 'Heritage Selvedge Denim Jacket', 'heritage-selvedge-denim-jacket', 'MF-DEN-07', 'Handcrafted from 13.5oz Japanese selvedge denim. Features custom brass hardware, reinforced stitching, and dual chest flap pockets that age beautifully over time.', 'Classic 13.5oz Japanese selvedge denim jacket with custom brass buttons.', 8999.00, 11999.00, 4000.00, 1, 1, 4.80, 24, 40),
+(8, 2, 'Merino Wool Crewneck Sweater', 'merino-wool-crewneck-sweater', 'MF-WOOL-08', 'Ultra-soft 100% extrafine Australian Merino wool. Naturally temperature-regulating, breathable, and odor-resistant for year-round layering.', 'Luxury extrafine Australian merino wool sweater in timeless cut.', 6499.00, 7999.00, 2800.00, 0, 0, 4.75, 18, 55),
+(9, 2, 'Urban Commuter Oxford Button-Down Shirt', 'urban-commuter-oxford-shirt', 'MF-OXF-09', 'Tailored slim-fit button-down crafted from 100% organic cotton pinpoint oxford. Wrinkle-resistant finish perfect for office and casual wear.', 'Classic tailored organic cotton oxford shirt with modern stretch.', 2999.00, 3999.00, 1200.00, 0, 0, 4.55, 31, 110),
+(10, 2, 'Apex Tech Chino Pants', 'apex-tech-chino-pants', 'MF-CHIN-10', 'Performance chinos built with four-way stretch, water-repellent DWR coating, hidden zippered security pockets, and breathable moisture-wicking fabric.', 'Water-repellent 4-way stretch performance chinos.', 4499.00, 5999.00, 1800.00, 1, 0, 4.82, 45, 75),
+(11, 2, 'Classic Tailored Wool Blend Blazer', 'classic-tailored-wool-blazer', 'MF-BLAZ-11', 'Modern structured blazer made from premium Italian wool blend. Features soft shoulder pads, dual back vents, and satin lining.', 'Refined Italian wool-blend two-button blazer.', 14999.00, 18999.00, 6500.00, 0, 1, 4.90, 15, 30),
+(12, 2, 'Heavyweight Organic Cotton Hoodie', 'heavyweight-cotton-hoodie', 'MF-HOOD-12', 'Substantial 450 GSM French terry cotton hoodie with double-lined hood, ribbed side gussets, and kangaroo front pocket.', 'Luxurious 450 GSM heavyweight French terry streetwear hoodie.', 3999.00, 5499.00, 1600.00, 0, 0, 4.70, 52, 95),
+
+-- Women's Fashion (13-18)
+(13, 3, 'Effortless Silk Slip Midi Dress', 'effortless-silk-slip-dress', 'WF-SLIP-13', 'Cut on the bias from 100% Mulberry silk for a fluid drape. Adjustable delicate straps and elegant side slit make it versatile for day to night.', '100% pure Mulberry silk bias-cut midi slip dress.', 8499.00, 10999.00, 3500.00, 1, 1, 4.88, 36, 45),
+(14, 3, 'Cashmere Oversized Turtleneck Knit', 'cashmere-oversized-turtleneck', 'WF-CASH-14', 'Sumptuously soft 100% Grade-A Mongolian cashmere with ribbed cuffs and hem. Relaxed silhouette that pairs effortlessly with denim or trousers.', '100% Mongolian Grade-A cashmere knit with relaxed drape.', 11999.00, 14999.00, 5000.00, 1, 0, 4.92, 28, 35),
+(15, 3, 'High-Rise Wide Leg Linen Trousers', 'high-rise-linen-trousers', 'WF-LIN-15', 'Breezy European flax linen trousers featuring a flattering high waist, pleated front, and deep side pockets. Effortless summer elegance.', 'High-waisted pleated European linen wide-leg pants.', 4499.00, 5999.00, 1800.00, 0, 0, 4.60, 22, 60),
+(16, 3, 'Double-Breasted Wool Trench Coat', 'double-breasted-wool-trench', 'WF-COAT-16', 'Timeless belted trench crafted from structured wool blend. Notched lapels, storm flap, storm cuffs, and deep tortoiseshell button closures.', 'Tailored structured wool-blend belted trench coat.', 16999.00, 21999.00, 7500.00, 1, 1, 4.95, 19, 25),
+(17, 3, 'Sculpting Seamless Active Jumpsuit', 'sculpting-seamless-jumpsuit', 'WF-JUMP-17', 'Full-length compression bodysuit with moisture-wicking four-way stretch fabric. Provides flattering silhouette and high support for gym and studio.', 'Form-fitting seamless active bodysuit with open back design.', 3999.00, 5299.00, 1500.00, 0, 1, 4.68, 41, 70),
+(18, 3, 'Pleated Floral Chiffon Maxi Skirt', 'pleated-floral-chiffon-skirt', 'WF-SKIR-18', 'Airy tiered chiffon maxi skirt with elastic waistband and romantic micro-floral print. Lined for comfort and fluid movement.', 'Romantic tiered floral print chiffon maxi skirt with elastic waist.', 3499.00, 4999.00, 1300.00, 0, 0, 4.58, 17, 50),
+
+-- Footwear (19-24)
+(19, 4, 'CloudRunner Nitro Performance Sneakers', 'cloudrunner-nitro-sneakers', 'FT-CLD-19', 'Engineered with responsive nitrogen-infused foam midsole and breathable engineered mesh upper. Delivers ultimate cushioning for daily runners.', 'Ultra-cushioned nitrogen foam running shoes with breathable mesh.', 9999.00, 12999.00, 4200.00, 1, 1, 4.84, 64, 85),
+(20, 4, 'Artisan Handcrafted Leather Chelsea Boots', 'artisan-leather-chelsea-boots', 'FT-BOOT-20', 'Constructed with full-grain Italian leather, Goodyear welt construction, and durable Dainite rubber soles. Built to last a lifetime.', 'Goodyear-welted full-grain Italian leather Chelsea boots.', 12999.00, 16999.00, 5500.00, 1, 0, 4.91, 33, 40),
+(21, 4, 'Minimalist Leather Low-Top Court Shoes', 'minimalist-leather-court-shoes', 'FT-CRT-21', 'Clean, understated luxury low-top sneaker handmade with butter-soft calfskin leather and waxed cotton laces.', 'Handcrafted minimalist white leather low-top sneakers.', 6999.00, 8999.00, 2800.00, 0, 0, 4.72, 49, 90),
+(22, 4, 'TrailGuard Waterproof Hiking Boots', 'trailguard-waterproof-hiking-boots', 'FT-HIKE-22', 'Rugged trail footwear featuring waterproof Gore-Tex membrane, Vibram Megagrip lugged outsoles, and protective rubber toe rand.', 'Vibram-sole waterproof Gore-Tex mountain hiking boots.', 11499.00, 14999.00, 4800.00, 0, 1, 4.86, 27, 45),
+(23, 4, 'ComfortSlide Orthopedic Leather Sandals', 'comfortslide-leather-sandals', 'FT-SLID-23', 'Anatomically contoured cork and latex footbed lined with soft suede. Adjustable dual leather buckled straps.', 'Dual-strap cork footbed anatomical suede slide sandals.', 2499.00, 3499.00, 950.00, 0, 0, 4.62, 38, 110),
+(24, 4, 'Velvet Slip-On Evening Loafers', 'velvet-slipon-evening-loafers', 'FT-LOAF-24', 'Luxurious plush velvet upper with grosgrain trim, quilted satin insole, and stacked leather heel. Perfect for formal and black-tie occasions.', 'Refined plush velvet evening dress loafers with quilted lining.', 8999.00, 11999.00, 3600.00, 0, 0, 4.77, 14, 30),
+
+-- Home & Living (25-30)
+(25, 5, 'Lumina Nordic Minimalist Arc Floor Lamp', 'lumina-nordic-arc-lamp', 'HL-LUM-25', 'Sculptural brass and matte black arc lamp with solid marble base. Step-dimmable warm LED with 3000K ambient illumination.', 'Sculptural Scandinavian arc floor lamp with solid Carrara marble base.', 9999.00, 13999.00, 4200.00, 1, 1, 4.89, 21, 30),
+(26, 5, 'Stoneware Handcrafted Ceramic Dinner Set (16-Piece)', 'stoneware-ceramic-dinner-set', 'HL-DIN-26', 'Artisanal ceramic tableware featuring matte reactive glaze. Microwave, oven, and dishwasher safe. Service for four.', 'Handmade 16-piece matte reactive glaze stoneware dining set.', 6999.00, 9499.00, 2800.00, 0, 0, 4.76, 35, 40),
+(27, 5, 'Ultrasonic Aromatherapy Diffuser & Humidifier', 'ultrasonic-aroma-diffuser', 'HL-DIFF-27', 'Real ceramic stone cover with whisper-quiet ultrasonic technology, ambient ambient nightlight, and automatic shut-off safety.', 'Whisper-quiet ceramic ultrasonic essential oil diffuser.', 2499.00, 3499.00, 900.00, 0, 0, 4.65, 53, 100),
+(28, 5, 'Washed Belgian Linen Duvet Cover Set', 'washed-belgian-linen-duvet-set', 'HL-BED-28', '100% natural pre-washed Belgian flax linen. Becomes softer with every wash, highly breathable for all seasons. Includes duvet cover and 2 pillow shams.', '100% pure organic Belgian washed flax linen duvet set.', 8999.00, 11999.00, 3600.00, 1, 0, 4.93, 40, 35),
+(29, 5, 'Geometric Handwoven Wool Area Rug (5x8 ft)', 'geometric-wool-area-rug', 'HL-RUG-29', 'Hand-tufted from 100% New Zealand virgin wool. Modern subtle geometric pattern with plush 0.75-inch pile height.', 'Plush hand-tufted New Zealand wool 5x8 modern geometric rug.', 14999.00, 19999.00, 6000.00, 0, 1, 4.81, 16, 20),
+(30, 5, 'Precision Temperature Gooseneck Pour-Over Kettle', 'precision-gooseneck-kettle', 'HL-KET-30', '1.0L matte black stainless steel electric kettle with degree-accurate temperature control, LCD display, and 60-minute heat hold.', 'Variable-temp matte black 1L electric pour-over coffee kettle.', 4999.00, 6999.00, 2000.00, 0, 0, 4.87, 44, 60),
+
+-- Accessories (31-35)
+(31, 6, 'Chronos Automatic Mechanical Skeleton Watch', 'chronos-automatic-skeleton-watch', 'AC-CHRO-31', 'Exhibition caseback showing 24-jewel automatic movement. Sapphire crystal face, genuine Horween leather strap, and 50m water resistance.', '24-jewel automatic skeleton watch with sapphire crystal.', 19999.00, 24999.00, 8500.00, 1, 1, 4.96, 26, 25),
+(32, 6, 'Voyager Full-Grain Leather Duffel Bag', 'voyager-leather-duffel-bag', 'AC-DUF-32', 'TSA carry-on compliant weekender crafted from vegetable-tanned cowhide. Includes dedicated shoe compartment and padded laptop sleeve.', 'Handcrafted vegetable-tanned leather carry-on weekender bag.', 12999.00, 16999.00, 5200.00, 1, 0, 4.88, 37, 30),
+(33, 6, 'Solstice Polarized Titanium Sunglasses', 'solstice-titanium-sunglasses', 'AC-SUN-33', 'Ultralight Japanese titanium frame with polarized UV400 anti-reflective lenses. Featherweight durability for all-day comfort.', 'Ultralight polarized Japanese titanium aviator sunglasses.', 5999.00, 7999.00, 2200.00, 0, 0, 4.71, 30, 70),
+(34, 6, 'Apex RFID Blocking Slim Carbon Fiber Wallet', 'apex-carbon-fiber-wallet', 'AC-WAL-34', 'Aerospace carbon fiber plates with expandable elastic band and integrated money clip. Blocks RFID theft.', 'Slim aerospace carbon fiber RFID-blocking minimalist wallet.', 1999.00, 2999.00, 700.00, 0, 0, 4.67, 85, 150),
+(35, 6, 'Silk Modal Large Patterned Scarf', 'silk-modal-patterned-scarf', 'AC-SCF-35', 'Sumptuously light blend of 70% modal and 30% silk with hand-rolled edges. Versatile 140x140cm size.', 'Lightweight 70/30 modal and silk blend luxury printed wrap.', 2499.00, 3499.00, 950.00, 0, 0, 4.54, 19, 65),
+
+-- Sports & Fitness (36-40)
+(36, 7, 'HydroFlex Insulated Stainless Steel Bottle (32oz)', 'hydroflex-insulated-bottle-32oz', 'SF-HYD-36', 'Double-wall vacuum insulation keeps drinks ice cold for 24 hours or piping hot for 12 hours. BPA-free leakproof straw lid.', '32oz double-wall vacuum insulated stainless steel water bottle.', 1499.00, 2199.00, 550.00, 1, 0, 4.83, 110, 160),
+(37, 7, 'ProGrip High-Density Non-Slip Yoga Mat', 'progrip-non-slip-yoga-mat', 'SF-YOGA-37', '6mm eco-friendly natural tree rubber with alignment guide lines and sweat-activated grip surface. Includes carrying strap.', '6mm natural rubber eco-friendly non-slip alignment yoga mat.', 2999.00, 4299.00, 1100.00, 0, 0, 4.79, 48, 80),
+(38, 7, 'HyperPulse Deep Tissue Massage Gun', 'hyperpulse-massage-gun', 'SF-GUN-38', 'Brushless quiet-glide motor delivering 3200 percussions per minute. Includes 6 interchangeable massage heads and travel case.', '6-speed ultra-quiet deep tissue percussion muscle massager.', 7499.00, 9999.00, 2900.00, 1, 1, 4.87, 57, 50),
+(39, 7, 'Adjustable Quick-Select Dumbbell Set (5-52.5 lbs)', 'adjustable-quick-select-dumbbells', 'SF-DUMB-39', 'Replace 15 pairs of weights with one selector dial system. Compact heavy-duty steel construction for home gym workouts.', 'Space-saving 5 to 52.5 lb dial adjustable dumbbell pair.', 18999.00, 24999.00, 8000.00, 0, 1, 4.92, 31, 20),
+(40, 7, 'Endurance GPS Running & Cycling Chest Strap', 'endurance-heart-rate-chest-strap', 'SF-HRM-40', 'Dual-mode ANT+ and Bluetooth 5.0 heart rate monitor with millimeter-precise ECG accuracy. Compatible with Strava and Garmin.', 'ECG-accurate dual Bluetooth/ANT+ heart rate chest monitor.', 2999.00, 4499.00, 1000.00, 0, 0, 4.69, 39, 90);
+
+-- Product Images
+INSERT INTO product_images (product_id, image_url, is_primary, sort_order) VALUES
+(1, 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80', 1, 1),
+(1, 'https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=800&q=80', 0, 2),
+(2, 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80', 1, 1),
+(2, 'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=800&q=80', 0, 2),
+(3, 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80', 1, 1),
+(4, 'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=800&q=80', 1, 1),
+(5, 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=800&q=80', 1, 1),
+(6, 'https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=800&q=80', 1, 1),
+(7, 'https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=800&q=80', 1, 1),
+(7, 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80', 0, 2),
+(8, 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=800&q=80', 1, 1),
+(9, 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=80', 1, 1),
+(10, 'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=800&q=80', 1, 1),
+(11, 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80', 1, 1),
+(12, 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80', 1, 1),
+(13, 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=80', 1, 1),
+(14, 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=800&q=80', 1, 1),
+(15, 'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80', 1, 1),
+(16, 'https://images.unsplash.com/photo-1539533018447-63fcce2678e3?auto=format&fit=crop&w=800&q=80', 1, 1),
+(17, 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80', 1, 1),
+(18, 'https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?auto=format&fit=crop&w=800&q=80', 1, 1),
+(19, 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80', 1, 1),
+(19, 'https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=800&q=80', 0, 2),
+(20, 'https://images.unsplash.com/photo-1638247025967-b4e38f787b76?auto=format&fit=crop&w=800&q=80', 1, 1),
+(21, 'https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=800&q=80', 1, 1),
+(22, 'https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&w=800&q=80', 1, 1),
+(23, 'https://images.unsplash.com/photo-1603808033192-082d6919d3e1?auto=format&fit=crop&w=800&q=80', 1, 1),
+(24, 'https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?auto=format&fit=crop&w=800&q=80', 1, 1),
+(25, 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80', 1, 1),
+(26, 'https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=800&q=80', 1, 1),
+(27, 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=800&q=80', 1, 1),
+(28, 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80', 1, 1),
+(29, 'https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&w=800&q=80', 1, 1),
+(30, 'https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=800&q=80', 1, 1),
+(31, 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80', 1, 1),
+(32, 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80', 1, 1),
+(33, 'https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=800&q=80', 1, 1),
+(34, 'https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=800&q=80', 1, 1),
+(35, 'https://images.unsplash.com/photo-1601924994987-69e26d50dc26?auto=format&fit=crop&w=800&q=80', 1, 1),
+(36, 'https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=800&q=80', 1, 1),
+(37, 'https://images.unsplash.com/photo-1592432678016-e910b452f9a2?auto=format&fit=crop&w=800&q=80', 1, 1),
+(38, 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80', 1, 1),
+(39, 'https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80', 1, 1),
+(40, 'https://images.unsplash.com/photo-1576243345690-4e4b79b63288?auto=format&fit=crop&w=800&q=80', 1, 1);
+
+-- Product Variants
+INSERT INTO product_variants (id, product_id, color, size, sku_suffix, stock_qty, price_override) VALUES
+-- Headphones (1)
+(1, 1, 'Midnight Black', 'Standard', 'BLK', 30, NULL),
+(2, 1, 'Silver Pearl', 'Standard', 'SLV', 20, NULL),
+(3, 1, 'Rose Gold', 'Standard', 'RSG', 15, NULL),
+-- Smartwatch (2)
+(4, 2, 'Space Gray', '44mm', 'SG-44', 25, NULL),
+(5, 2, 'Silver', '40mm', 'SL-40', 25, 11499.00),
+-- Selvedge Denim Jacket (7)
+(6, 7, 'Indigo Raw', 'Small', 'S', 8, NULL),
+(7, 7, 'Indigo Raw', 'Medium', 'M', 15, NULL),
+(8, 7, 'Indigo Raw', 'Large', 'L', 12, NULL),
+(9, 7, 'Indigo Raw', 'X-Large', 'XL', 5, NULL),
+-- Merino Wool Sweater (8)
+(10, 8, 'Charcoal', 'Small', 'CHR-S', 10, NULL),
+(11, 8, 'Charcoal', 'Medium', 'CHR-M', 20, NULL),
+(12, 8, 'Charcoal', 'Large', 'CHR-L', 15, NULL),
+(13, 8, 'Navy Blue', 'Medium', 'NVY-M', 10, NULL),
+-- Silk Slip Dress (13)
+(14, 13, 'Emerald Green', 'XS', 'EMR-XS', 8, NULL),
+(15, 13, 'Emerald Green', 'S', 'EMR-S', 15, NULL),
+(16, 13, 'Emerald Green', 'M', 'EMR-M', 12, NULL),
+(17, 13, 'Champagne', 'S', 'CMP-S', 10, NULL),
+-- Sneakers (19)
+(18, 19, 'Crimson Red', 'UK 8 / US 9', '8', 20, NULL),
+(19, 19, 'Crimson Red', 'UK 9 / US 10', '9', 30, NULL),
+(20, 19, 'Crimson Red', 'UK 10 / US 11', '10', 25, NULL),
+(21, 19, 'Stealth Black', 'UK 9 / US 10', 'BLK-9', 10, NULL),
+-- Leather Boots (20)
+(22, 20, 'Cognac Brown', 'UK 8', 'COG-8', 10, NULL),
+(23, 20, 'Cognac Brown', 'UK 9', 'COG-9', 15, NULL),
+(24, 20, 'Onyx Black', 'UK 9', 'BLK-9', 15, NULL);
+
+-- Coupons (INR values)
+INSERT INTO coupons (id, code, description, discount_type, discount_value, min_order_amount, max_discount, start_date, end_date, usage_limit, times_used, is_active) VALUES
+(1, 'WELCOME10', 'Welcome 10% discount on your first order', 'percentage', 10.00, 0.00, 2000.00, '2025-01-01', '2030-12-31', 1000, 48, 1),
+(2, 'SAVE20', 'Save 20% on orders above ₹4,999', 'percentage', 20.00, 4999.00, 5000.00, '2025-01-01', '2030-12-31', 500, 112, 1),
+(3, 'FREESHIP', 'Free standard shipping on all orders', 'fixed', 149.00, 999.00, 149.00, '2025-01-01', '2030-12-31', 500, 89, 1),
+(4, 'KICKUP500', 'Get ₹500 flat discount on orders over ₹4,999', 'fixed', 500.00, 4999.00, 500.00, '2025-01-01', '2030-12-31', 200, 19, 1);
+
+-- Addresses
+INSERT INTO addresses (id, user_id, full_name, phone, address_line1, address_line2, city, state, postal_code, country, is_default_shipping, is_default_billing) VALUES
+(1, 1, 'Alex Morgan', '+91 98765 43210', 'B-402, Skyline Residency', 'Koramangala 4th Block', 'Bengaluru', 'Karnataka', '560034', 'India', 1, 1),
+(2, 1, 'Alex Morgan', '+91 98765 43210', '100 Cyber City, Tower B', 'DLF Phase 2', 'Gurugram', 'Haryana', '122002', 'India', 0, 0),
+(3, 3, 'David Miller', '+91 98765 67890', '74 Bandra West', 'Linking Road', 'Mumbai', 'Maharashtra', '400050', 'India', 1, 1);
+
+-- Wishlist for User 1
+INSERT INTO wishlists (user_id, product_id) VALUES
+(1, 1),
+(1, 13),
+(1, 31);
+
+-- Sample Verified Reviews
+INSERT INTO reviews (product_id, user_id, rating, title, comment, is_verified_purchase, helpful_votes, created_at) VALUES
+(1, 1, 5, 'Unbelievable sound stage and battery life!', 'I wore these on a 14-hour flight and the noise cancelling filtered everything out effortlessly. Super comfortable headband.', 1, 14, '2026-02-15 10:20:00'),
+(1, 3, 5, 'Best ANC headphones in this price tier', 'Better than my previous Sony XM4s. The graphene drivers produce crystal crisp mids and highs without muddy bass.', 1, 8, '2026-02-20 14:45:00'),
+(2, 1, 5, 'Sleek and battery lasts 3 full days', 'The OLED screen is gorgeous and the ECG sensor synced with my Apple Health and Google Fit seamlessly.', 1, 11, '2026-01-28 09:12:00'),
+(7, 3, 5, 'True authentic Japanese selvedge', 'Stiff at first as expected from raw denim, but after two weeks it formed custom fades that look amazing. 10/10 craftsmanship.', 1, 9, '2026-02-05 16:30:00'),
+(13, 1, 5, 'Pure luxury fabric and fit', 'The Mulberry silk feels like a dream. Perfectly bias-cut, hangs gracefully without clinging. Wore it to a wedding reception!', 1, 17, '2026-02-12 11:00:00'),
+(19, 3, 5, 'Like running on clouds', 'Put 50 miles on these shoes already. The nitrogen foam provides springy rebound that saves my knees.', 1, 23, '2026-01-19 18:22:00'),
+(31, 1, 5, 'Collector quality automatic watch', 'The open skeleton dial is a work of art. Keeps +/- 4 seconds accuracy a day. Looks like a ₹1,00,000 timepiece on the wrist.', 1, 19, '2026-02-22 13:10:00');
+
+-- Newsletter Subscribers
+INSERT INTO newsletter_subscribers (email, status) VALUES
+('customer@example.com', 'active'),
+('techlover99@gmail.com', 'active'),
+('styleinspo@outlook.com', 'active');
